@@ -1,0 +1,87 @@
+/* Temizleme */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(45deg, #000, #555); /* Siyah + gri degrade arka plan */
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Yazı stili ve neon efekti */
+.message-container {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.birthday-message {
+  font-size: 8vw; /* Yazı boyutunu duyarlı yap */
+  font-weight: bold;
+  color: #32CD32;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px #32CD32, 0 0 15px #32CD32, 0 0 20px #32CD32; /* Daha az parlama */
+  position: relative;
+  animation: glow 5s ease-in-out infinite alternate;
+}
+
+/* Neon Parlaklık Efekti (Yavaş Yanıp Sönme) */
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #32CD32, 0 0 8px #32CD32, 0 0 10px #32CD32; /* Daha az parlama */
+  }
+  50% {
+    text-shadow: 0 0 10px #32CD32, 0 0 15px #32CD32, 0 0 20px #32CD32; /* Daha az parlama */
+  }
+  100% {
+    text-shadow: 0 0 5px #32CD32, 0 0 8px #32CD32, 0 0 10px #32CD32; /* Daha az parlama */
+  }
+}
+
+/* Kalp Animasyonu */
+.heart {
+  font-size: 3vw; /* Kalp boyutunu duyarlı yap */
+  color: #32CD32;
+  position: absolute;
+  animation: move-up 15s linear infinite;
+  text-shadow: 0 0 5px #32CD32, 0 0 8px #32CD32; /* Neon efekti daha hafif */
+  opacity: 0;
+  z-index: 1;
+}
+
+/* Kalp hareketi */
+@keyframes move-up {
+  0% {
+    bottom: -150px;
+    opacity: 1;
+  }
+  100% {
+    bottom: 100vh;
+    opacity: 0;
+  }
+}
+
+/* Kalplerin rastgele dağılması */
+.heart:nth-child(1) { left: 5%; animation-delay: -2s; }
+.heart:nth-child(2) { left: 20%; animation-delay: -1.5s; }
+.heart:nth-child(3) { left: 40%; animation-delay: -3s; }
+.heart:nth-child(4) { left: 60%; animation-delay: -1s; }
+.heart:nth-child(5) { left: 80%; animation-delay: -4s; }
+.heart:nth-child(6) { left: 15%; animation-delay: -2.5s; }
+.heart:nth-child(7) { left: 30%; animation-delay: -3.5s; }
+.heart:nth-child(8) { left: 50%; animation-delay: -1.8s; }
+.heart:nth-child(9) { left: 70%; animation-delay: -2.2s; }
+.heart:nth-child(10) { left: 10%; animation-delay: -1.7s; }
+.heart:nth-child(11) { left: 25%; animation-delay: -2.9s; }
+.heart:nth-child(12) { left: 45%; animation-delay: -4.2s; }
+.heart:nth-child(13) { left: 65%; animation-delay: -3.3s; }
+.heart:nth-child(14) { left: 85%; animation-delay: -4.5s; }
+.heart:nth-child(15) { left: 55%; animation-delay: -2.8s; }
